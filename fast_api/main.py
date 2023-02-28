@@ -1,5 +1,6 @@
 import fastapi
 import uvicorn
+from typing import Optional
 
 api = fastapi.FastAPI()
 
@@ -26,10 +27,16 @@ def default():
 
 
 @api.get('/api/test/{x}')
-def calcola(x: int, y: int = 50):
+def calcola(x: int, y: int = 50, z: Optional[int] = None):
+    if x == 0:
+        return fastapi.responses.JSONResponse(
+            content={'errore': 'per 0 è na somma scema'},
+            status_code=400
+        )
     return {
         'x': x,
         'y': y,
+        'z': z,
         'somma': x + y
     }
 
