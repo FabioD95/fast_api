@@ -1,0 +1,18 @@
+{
+    "python.pythonPath": "/home/fabio/develop/fast_api/fast_api/.venv",
+    "python.linting.flake8Enabled": true,
+    "python.linting.mypyEnabled": false,
+    "python.linting.enabled": true,
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5442,
+            "driver": "PostgreSQL",
+            "name": "FastCash Local",
+            "username": "root",
+            "database": "fastcash",
+            "password": "SUPERduper42"
+        }
+    ]
+}
